@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaStore | Tienda en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación (Header) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Nova<span>Store</span></a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Inicio</a>
+                <a href="#productos" class="nav-link">Productos</a>
+                <a href="#categorias" class="nav-link">Categorías</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Carrito de compras">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-counter" id="cartCounter">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Hero Section (Banner Principal) -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">Nueva Colección 2026</span>
+                    <h1>Innovación y Estilo al Alcance de tu Mano</h1>
+                    <p>Descubre nuestra selección exclusiva de productos diseñados para elevar tu día a día con la máxima calidad y diseño vanguardista.</p>
+                    <div class="hero-buttons">
+                        <a href="#productos" class="btn btn-primary">Explorar Productos</a>
+                        <a href="#contacto" class="btn btn-secondary">Saber Más</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card-floating">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <h4>Garantía Total</h4>
+                            <p>Envíos seguros y rápidos</p>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Producto destacado">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuadrícula de Productos Destacados -->
+        <section class="products-section" id="productos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Productos Destacados</h2>
+                    <p>Seleccionados especialmente para ti con los mejores estándares de calidad.</p>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Los productos se inyectan dinámicamente desde JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="footer" id="contacto">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo">Nova<span>Store</span></a>
+                <p>Tu destino de confianza para tecnología, moda y estilo de vida moderno.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Suscríbete</h3>
+                <p>Recibe ofertas exclusivas y novedades directamente en tu correo.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Unirme</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NovaStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Notificación Flotante (Toast) -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Producto agregado al carrito</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
